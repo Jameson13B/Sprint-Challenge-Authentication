@@ -16,7 +16,7 @@ class Signup extends Component {
       .post('http://localhost:5000/api/register', this.state)
       .then(response => {
         localStorage.setItem('jwt', response.data);
-        this.props.history.push('/users');
+        this.props.history.push('/jokes');
       })
       .catch(err => {console.log('Axios failed.', err)})
     this.setState({ username: '', password: '', department: '' })
