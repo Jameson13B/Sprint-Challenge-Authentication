@@ -3,6 +3,8 @@ import { Route } from 'react-router-dom';
 import './App.css';
 
 import Signup from './Signup';
+import Signin from './Signin';
+import Jokes from './Jokes';
 
 class App extends Component {
   render() {
@@ -10,6 +12,8 @@ class App extends Component {
       <div className="App">
         <h1>Dad Jokes</h1>
         <Route path='/signup' component={Signup} />
+        <Route path='/signin' component={Signin} />
+        <Route path='/jokes' component={Jokes} />
       </div>
     );
   }
