@@ -1,3 +1,139 @@
+/* App Styles */
 .App {
+  display: flex;
+  align-items: center;
   text-align: center;
+  background: #D9DBBC;
+  margin: 25vh auto;
+}
+
+/* Signup Styles */
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FCDDBC;
+  height: 50vh;
+  max-width: 768px;
+  margin: 0 auto;
+  width: 100%;
+  border: 3px double #EF959D;
+  border-radius: 15px;
+}
+.signup .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+}
+.signup .form-header {
+  font-size: 2rem;
+}
+.signup input {
+  width: 60%;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.signup .btn {
+  width: 30%;
+  height: 7%;
+  border: 1px solid #69585F;
+  border-radius: 15px;
+  background: #B8D8BA;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Signin Styles */
+.signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FCDDBC;
+  height: 50vh;
+  max-width: 768px;
+  margin: 0 auto;
+  width: 100%;
+  border: 3px double #EF959D;
+  border-radius: 15px;
+}
+.signin .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+}
+.signin .form-header {
+  font-size: 2rem;
+}
+.signin input {
+  width: 60%;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.signin .btn {
+  width: 30%;
+  height: 7%;
+  border: 1px solid #69585F;
+  border-radius: 15px;
+  background: #B8D8BA;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* jokes Styles */
+.jokes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FCDDBC;
+  height: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  width: 100%;
+  border: 3px double #EF959D;
+  border-radius: 15px;
+  padding-top: 2%;
+}
+.jokes .btn {
+  width: 30%;
+  height: 7%;
+  border: 1px solid #69585F;
+  border-radius: 15px;
+  background: #B8D8BA;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.jokes .jokes-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+  width: 60%;
+  padding: 2% 0;
+}
+.jokes .joke {
+  width: 30%;
+  border: 1px solid #69585F;
+  padding: 2% 15%;
+  margin-bottom: 5%;
+}
+.jokes .joke p {
+  font-size: .8rem;
+}
+.jokes .joke p:nth-child(1) {
+  font-size: 1rem;
 }
