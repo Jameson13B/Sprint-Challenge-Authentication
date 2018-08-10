@@ -1,6 +1,9 @@
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const db = require('../database/dbConfig');
 const axios = require('axios');
 
-const { authenticate } = require('./middlewares');
+const { authenticate, generateToken } = require('./middlewares');
 
 module.exports = server => {
   server.post('/api/register', register);
@@ -9,7 +12,21 @@ module.exports = server => {
 };
 
 function register(req, res) {
-  // implement user registration
+  const user = req.body;
+  const hash = bcrypt.hashSync(user.password, 10);
+  user.password = hash;
+  db('users')
+    .insert(user)
+    .then(function(ids) {
+      db('users')
+        .where({ id: ids[0] })
+        .first()
+        .then(user => {
+          const token = generateToken(user);
+          res.status(201).json(token);
+        });
+    })
+    .catch(function(error) {res.status(500).json({ error });});
 }
 
 function login(req, res) {
